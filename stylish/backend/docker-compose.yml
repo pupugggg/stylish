@@ -1,0 +1,36 @@
+version: '3'
+services:
+    mysql:
+        env_file: .env
+        container_name: mysql
+        restart: always
+        image: mysql:latest
+        environment:
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_ROOT_PASSWORD=${DB_PASS}
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=pass
+        volumes:
+            - ./db:/var/lib/mysql
+        ports:
+            - '3306:3306'
+        cap_add:
+            - SYS_NICE
+    cache:
+        image: redis:alpine
+        container_name: cache
+        restart: always
+        ports:
+            - '6379:6379'
+        command: redis-server --save 20 1
+        volumes:
+            - ./cache:/data
+    web:
+        build: .
+        restart: always
+        container_name: web
+        ports:
+            - '5000:5000'
+        depends_on:
+            - mysql
+            - cache

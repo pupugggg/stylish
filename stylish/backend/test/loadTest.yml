@@ -1,0 +1,18 @@
+config:
+  target: "http://stylish-269333730.ap-northeast-1.elb.amazonaws.com/api/v1"
+  phases:
+    - duration: 60
+      arrivalRate: 50
+      name: Warm up
+    - duration: 120
+      arrivalRate: 50
+      rampTo: 2000
+      name: Ramp up load
+    - duration: 60
+      arrivalRate: 2000
+      name: Sustained load
+scenarios:
+  - name: "get into main page"
+    flow:
+      - get:
+          url: "/products/men?page=0"

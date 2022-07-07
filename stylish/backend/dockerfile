@@ -1,0 +1,9 @@
+# specify the node base image with your desired version node:<version>
+FROM node:lts-alpine
+EXPOSE 5000
+WORKDIR /usr/src/app
+COPY package*.json .
+RUN npm ci
+COPY . /workplace
+COPY . .
+CMD ["npm", "start"]

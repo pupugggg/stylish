@@ -1,0 +1,10 @@
+const express = require('express')
+const orderController = require('../controllers/orderController')
+const authMiddleware = require('../middlewares/authMiddleware')
+const router = express.Router()
+router.use(authMiddleware.authHandler)
+router.route('/').get(orderController.getHistory)
+router.route('/cart').post(orderController.saveCart)
+router.route('/checkout').post(orderController.checkout)
+router.route('/update').post(orderController.updateRemain)
+module.exports = router
