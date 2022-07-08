@@ -1,15 +1,32 @@
-* week_0_1
-* week_0_2
-url:http://15.152.173.123/
+# STYLiSH
 
-week_1_4:
-* to run the code:
-* specify:
-1. user(sql local)
-2. password(sql local)
-3. host(localhost)
-* in your .env
+Online Shopping for trending Clothes & Fashion
 
-* then use command:
-* npm i
-* npm run dev in ./stylish
+[Click here for the demo](http://18.182.2.156)
+
+[Take a glimpse of the privew](#preview)
+
+## Table of Contents  
+
+[Preview](#preview)
+
+[Architecture](#architectrue)
+
+[Tools](#tools--depenecy)
+
+## PREVIEW
+
+
+
+## ARCHITECTRUE
+
+! [alt text] (images/Architecture.jpg)
+
+## TOOLS & DEPENECY
+
+The Main tools used in this projects:
+
+* Frontend
+  * 2
+* Backend
+  * 2
