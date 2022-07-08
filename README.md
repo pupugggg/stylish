@@ -61,8 +61,7 @@ Please use this card if you want to purchase the products:
   ![alt text](/images/schema.svg)
 
 * Payment
-
-  The payment service is prvided by TapPay SDK, there are three main step to complete payment process:
+  The payment service is prvided by [TapPay SDK](https://docs.tappaysdk.com/tutorial/zh/home.html#home), there are three main step to complete payment process:
   ![alt-img](https://docs.tappaysdk.com/images/Welcome/pay_by_prime_flow.jpeg)
 
   1. Send credit card information to TapPay server then recieve unique key called prime.
