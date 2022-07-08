@@ -58,7 +58,7 @@ Please use this card if you want to purchase the products:
 * MySQL
 
   Here is the schema:
-  ![alt text](/images/dbSchema.svg)
+  ![alt text](/images/schema.svg)
 
 * Payment
 
